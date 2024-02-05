@@ -14,13 +14,13 @@ jobs:
       contents: read
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Build Docker image
-      run: docker build -t anissaras/react-app .
+      - name: Build Docker image
+        run: docker build -t anissaras/react-app .
 
-    - name: Connexion à Docker Hub
-      run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
-    - name: Push Docker image to Docker Hub
-      run: docker push anissaras/react-app
+      - name: Connexion à Docker Hub
+        run: docker login -u ${{ secrets.DOCKERHUB_USERNAME }} -p ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Push Docker image to Docker Hub
+        run: docker push anissaras/react-app

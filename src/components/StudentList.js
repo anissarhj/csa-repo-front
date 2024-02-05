@@ -5,7 +5,7 @@ const StudentList = () => {
     const [students, setStudents] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8080/api/students')
+        axios.get('http://localhost:8081/api/students')
             .then(response => {
                 setStudents(response.data);
             })
