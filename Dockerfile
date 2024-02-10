@@ -1,20 +1,21 @@
-# pull official base image
+# Image de base
 FROM node:20.11.0
 
-# set working directory
+# Repertoire de travail
 WORKDIR /app
 
-# add /app/node_modules/.bin to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
-
-# install app dependencies
+# Copie de fichier package.json et yarn.lock
 COPY package.json ./
 COPY package-lock.json ./
-RUN npm install --silent
-RUN npm install react-scripts@3.4.1 -g --silent
 
-# add app
+# Installation des dépendances
+RUN npm install
+
+# Copie le reste de l'application
 COPY . ./
 
-# start app
-CMD ["npm", "start"]
+#Port
+EXPOSE 3000
+
+#Commande
+CMD["npm","start"]
