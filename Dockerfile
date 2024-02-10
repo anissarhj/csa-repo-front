@@ -12,10 +12,10 @@ COPY package-lock.json ./
 RUN npm install
 
 # Copie le reste de l'application
-COPY . ./
+COPY . .
 
 #Port
 EXPOSE 3000
 
 #Commande
-CMD["npm","start"]
+CMD ["npm","start"]
