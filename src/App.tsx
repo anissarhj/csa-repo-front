@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Login from './components/Login';
 import StudentList from "./components/StudentList";
 import Register from "./components/Register";
+import EtudiantList from "./components/EtudiantList";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/student" element={<StudentList />} />
+              <Route path="/etudiant" element={<EtudiantList />} />
           </Routes>
       </Router>
   );

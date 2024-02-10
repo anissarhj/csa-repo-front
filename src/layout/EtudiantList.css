@@ -1,0 +1,14 @@
+.etudiant-list-container {
+    display: flex;
+}
+
+.etudiant-list {
+    flex: 1;
+    padding: 20px;
+}
+
+.ajout-etudiant {
+    flex: 1;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+}
